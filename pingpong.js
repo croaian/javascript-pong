@@ -1,8 +1,8 @@
 function setup(){
-    //aqui vou criar minha "masa"
+    //aqui vou criar minha "meça"
     createCanvas(600,400);
 }
 function draw(){
     //aqui vou por a cor da minha "mesa"
-    backgrond(255,255,255);
+    backgrond(138,43,226);
 }
