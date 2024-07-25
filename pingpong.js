@@ -15,6 +15,7 @@ function draw(){
     //a cor da mesa é em rgb
     background(105,0,231);
     criaBolinha(xBolinha,yBolinha,tamBolinha)
+    moveBolinha()
 }
 
 function criaBolinha(xBolinha,yBolinha,tamBolinha){
