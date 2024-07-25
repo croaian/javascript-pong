@@ -11,7 +11,7 @@ function setup(){
 }
 
 function draw(){
-    background(248,128,39); 
+    background(48,128,39); 
     criaBolinha(xBolinha, yBolinha, tamBolinha);
     moveBolinha();
 
