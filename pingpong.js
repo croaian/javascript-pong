@@ -2,7 +2,7 @@ let xBolinha = 300;
 let yBolinha = 300;
 let tamBolinha = 35;
 let xvelocidadeBolinha = 10;
-let yvelocidadeBolinha = 6;
+let yvelocidadeBolinha = 3;
 let xRaquete=400
 let yRaquete=400
 let alturaRaquete=500
@@ -37,7 +37,7 @@ function Borda(){
     }
 }
 
-function criaRaquete(yRaquete, xRaquete, alturaRaquete, larguraRaquete){
-    fill("blue")
-    Reflect(yRaquete, xRaquete, alturaRaquete, larguraRaquete)
+function criaRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete){
+    fill("blue");
+    Reflect(xRaquete, yRaquete, larguraRaquete, alturaRaquete)
 }
