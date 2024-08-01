@@ -6,8 +6,8 @@ let xvelocidadeBolinha = 6;
 let yvelocidadeBolinha = 6;
 let xRaquete=5
 let yRaquete=150
-let alturaRaquete=10
-let larguraRaquete=90
+let alturaRaquete =90
+let larguraRaquete =10
 
 function setup(){
     createCanvas(600,400);
