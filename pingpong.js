@@ -10,11 +10,11 @@ let larguraRaquete = 10;
 let alturaRaquete = 90;
 
 function setup(){
-    createCanvas(600,400);
+    createCanvas(1200,800);
 }
 
 function draw(){
-    background(255,255,255); 
+    background(0,0,0); 
     criaBolinha(xBolinha, yBolinha, tamBolinha);
     movimentaBolinha();
     bolinhaBorda();
