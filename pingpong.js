@@ -1,12 +1,13 @@
 let xBolinha = 300;
 let yBolinha = 300;
 let tamBolinha = 35;
+let raioBolinha= tamBolinha/2;
 let xvelocidadeBolinha = 10;
 let yvelocidadeBolinha = 3;
-let xRaquete=400
-let yRaquete=400
-let alturaRaquete=500
-let larguraRaquete=500
+let xRaquete=5
+let yRaquete=150
+let alturaRaquete=10
+let larguraRaquete=90
 
 function setup(){
     createCanvas(1200,800);
@@ -17,10 +18,15 @@ function draw(){
     criaBolinha(xBolinha, yBolinha, tamBolinha);
     moveBolinha();
     Borda();
+    criaRaquete(xRaquete, yRaquete, alturaRaquete, larguraRaquete);
+    moveRaquete();
+    colideRaquete();
+    bolinhaBorda();
 }
 
 function criaBolinha(xBolinha, yBolinha,tamBolinha){
     circle (xBolinha,yBolinha,tamBolinha);
+    fill ("bleack")
 }
 
 function moveBolinha(){
@@ -40,4 +46,16 @@ function Borda(){
 function criaRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete){
     fill("blue");
     Rect(xRaquete, yRaquete, larguraRaquete, alturaRaquete)
+}
+
+if(keyIsDown(UP_ARROW)){
+    yRaquete -= 10;
+}
+if(KeyIsDown(DOWN_ARROW)){
+    yRaquete +=10
+}
+{
+    if(xBolinha - raioBolinha < xRaquete + larguraRaquete && yBolinha + raioBolinha > yRaquete){
+        xvelocidadeBolinha*= -1;
+    }
 }
