@@ -10,7 +10,7 @@ let alturaRaquete=10
 let larguraRaquete=90
 
 function setup(){
-    createCanvas(1200,800);
+    createCanvas(600,400);
 }
 
 function draw(){
