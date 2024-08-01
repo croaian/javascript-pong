@@ -47,11 +47,13 @@ function criaRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete){
     Rect(xRaquete, yRaquete, larguraRaquete, alturaRaquete)
 }
 
-if(keyIsDown(UP_ARROW)){
-    yRaquete -= 10;
-}
-if(KeyIsDown(DOWN_ARROW)){
-    yRaquete += 10
+function moveRaquete(){
+    if(keyIsDown(UP_ARROW)){
+        yRaquete -= 10;
+    }
+    if(KeyIsDown(DOWN_ARROW)){
+        yRaquete += 10
+    }
 }
  function colideRaquete(){
     if(xBolinha - raioBolinha < xRaquete + larguraRaquete && yBolinha + raioBolinha > yRaquete + alturaRaquete && yBolinha + raioBolinha > yRaquete){
