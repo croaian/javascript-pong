@@ -1,12 +1,12 @@
 let xBolinha = 300;
-let yBolinha = 200;
-let tamBolinha = 25;
+let yBolinha = 300;
+let tamBolinha = 35;
 let xvelocidadeBolinha = 10;
 let yvelocidadeBolinha = 6;
-let xRaquete=20
-let yRaquete=75
-let alturaRaquete=200
-let larguraRaquete=200
+let xRaquete=400
+let yRaquete=400
+let alturaRaquete=500
+let larguraRaquete=500
 
 function setup(){
     createCanvas(1200,800);
