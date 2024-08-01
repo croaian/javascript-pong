@@ -1,8 +1,12 @@
 let xBolinha = 300;
 let yBolinha = 200;
 let tamBolinha = 25;
-let xvelocidadeBolinha = 40;
-let yvelocidadeBolinha = 6;
+let xvelocidadeBolinha = 15;
+let yvelocidadeBolinha = 10;
+let xRaquete=20
+let yRaquete=75
+let alturaRaquete=200
+let larguraRaquete=200
 
 function setup(){
     createCanvas(1200,800);
@@ -31,4 +35,9 @@ function Borda(){
     if (yBolinha > height || yBolinha < 0){
         yvelocidadeBolinha *= -1;
     }
+}
+
+function criaRaquete(yRaquete, xRaquete, alturaRaquete, larguraRaquete){
+    fill("blue")
+    Reflect(yRaquete, xRaquete, alturaRaquete, larguraRaquete)
 }
