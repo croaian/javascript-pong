@@ -1,7 +1,7 @@
 let xBolinha = 300;
-let yBolinha = 300;
-let tamBolinha = 35;
-let raioBolinha= tamBolinha/2;
+let yBolinha = 200;
+let tamBolinha = 25;
+let raioBolinha = tamBolinha/2;
 let xvelocidadeBolinha = 6;
 let yvelocidadeBolinha = 6;
 let xRaquete=5
