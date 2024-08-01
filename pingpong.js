@@ -1,7 +1,7 @@
 let xBolinha = 300;
 let yBolinha = 200;
 let tamBolinha = 25;
-let xvelocidadeBolinha = 6;
+let xvelocidadeBolinha = 12;
 let yvelocidadeBolinha = 6;
 
 function setup(){
