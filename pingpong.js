@@ -4,36 +4,37 @@ let tamBolinha = 25;
 let raioBolinha = tamBolinha/2;
 let xvelocidadeBolinha = 6;
 let yvelocidadeBolinha = 6;
-let xRaquete=5
-let yRaquete=150
-let alturaRaquete =90
-let larguraRaquete =10
+let xRaquete = 5;
+let yRaquete = 150;
+let larguraRaquete = 10;
+let alturaRaquete = 90;
 
 function setup(){
     createCanvas(600,400);
 }
 
 function draw(){
-    background(18,128,50); 
+    background(255,255,255); 
     criaBolinha(xBolinha, yBolinha, tamBolinha);
-    moveBolinha();
-    Borda();
-    criaRaquete(xRaquete, yRaquete, alturaRaquete, larguraRaquete);
-    moveRaquete();
-    colideRaquete();
+    movimentaBolinha();
     bolinhaBorda();
+    criaRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete);
+    movimentaRaquete();
+    colideRaquete();
 }
 
-function criaBolinha(xBolinha, yBolinha,tamBolinha){
+function criaBolinha(xBolinha, yBolinha, tamBolinha) {
+    fill ("red");
     circle (xBolinha,yBolinha,tamBolinha);
 }
 
-function moveBolinha(){
+function movimentaBolinha() {
+    
     xBolinha = xvelocidadeBolinha + xBolinha;
     yBolinha = yvelocidadeBolinha + yBolinha;
 }
 
-function Borda(){
+function bolinhaBorda(){
     if (xBolinha > width || xBolinha < 0){
         xvelocidadeBolinha *= -1;
     }
@@ -42,21 +43,23 @@ function Borda(){
     }
 }
 
-function criaRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete){
+function criaRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete) {
     fill("blue");
-    Rect(xRaquete, yRaquete, larguraRaquete, alturaRaquete)
+    rect(xRaquete, yRaquete, larguraRaquete, alturaRaquete);
 }
 
-function moveRaquete(){
+function movimentaRaquete() {
+
     if(keyIsDown(UP_ARROW)){
         yRaquete -= 10;
     }
-    if(KeyIsDown(DOWN_ARROW)){
-        yRaquete += 10
+    if(keyIsDown(DOWN_ARROW)){
+        yRaquete += 10;
     }
 }
- function colideRaquete(){
-    if(xBolinha - raioBolinha < xRaquete + larguraRaquete && yBolinha + raioBolinha > yRaquete + alturaRaquete && yBolinha + raioBolinha > yRaquete){
+
+function colideRaquete(){
+    if(xBolinha - raioBolinha < xRaquete + larguraRaquete && yBolinha - raioBolinha < yRaquete + alturaRaquete && yBolinha + raioBolinha > yRaquete){
         xvelocidadeBolinha *= -1;
     }
- }
+}
