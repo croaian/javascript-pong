@@ -54,7 +54,7 @@ if(KeyIsDown(DOWN_ARROW)){
     yRaquete += 10
 }
  function colideRaquete(){
-    if(xBolinha - raioBolinha < xRaquete + larguraRaquete && yBolinha + raioBolinha > yRaquete){
+    if(xBolinha - raioBolinha < xRaquete + larguraRaquete && yBolinha + raioBolinha > yRaquete + alturaRaquete && yBolinha + raioBolinha > yRaquete){
         xvelocidadeBolinha *= -1;
     }
  }
