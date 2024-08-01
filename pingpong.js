@@ -39,5 +39,5 @@ function Borda(){
 
 function criaRaquete(xRaquete, yRaquete, larguraRaquete, alturaRaquete){
     fill("blue");
-    Reflect(xRaquete, yRaquete, larguraRaquete, alturaRaquete)
+    Rect(xRaquete, yRaquete, larguraRaquete, alturaRaquete)
 }
